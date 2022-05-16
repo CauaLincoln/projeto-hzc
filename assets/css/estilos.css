@@ -255,6 +255,9 @@ body {
     color: #95999C;
 }
 
+.cartao__info--tempo {
+    margin-bottom: 0.5rem;
+}
 .cartao__info--tempo::before {
     content: "\e90c";
     margin-right: 8px;    
@@ -267,6 +270,7 @@ body {
 
 .cartao__info--money {
     font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 .cartao__info--money::before {
     margin-right: 8px;
@@ -306,6 +310,10 @@ body {
 
 .cartao--recentes {
     display: none;
+}
+
+.cartao__perfil {
+    margin-bottom: 0.4rem;
 }
 
 @media screen and (min-width: 1440px) {
