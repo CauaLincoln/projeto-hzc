@@ -196,7 +196,7 @@ body {
             "destaque-video destaque-video videos-recentes"
             "secao-videos secao-videos secao-videos"
             "produtos-recentes destaque-produtos destaque-produtos"
-            "secao-produtos secao-produtos secao-produtos"
+            "secao-produtos secao-produtos secao-produtos"       
         ;
         column-gap: 32px;
         padding: 16px 60px;
@@ -215,6 +215,9 @@ body {
     background-color: #2C343A;
 }
 
+.cartao__imagem {
+    height: 18rem;
+}
 .cartao__imagem--desktop {
     display: none;
 }
@@ -228,7 +231,6 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 8px;
-    row-gap: 16px;
 }
 
 .cartao__destaque {
@@ -236,7 +238,7 @@ body {
 }
 
 .cartao__titulo {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     grid-column: span 2;
 }
@@ -263,6 +265,19 @@ body {
     margin-right: 8px;    
 }
 
+.cartao__info--money {
+    font-size: 1rem;
+}
+.cartao__info--money::before {
+    margin-right: 8px;
+    content: "\e905";
+}
+
+.cartao__botao--comprar::before {
+    content: "\e901";
+    font-size: 1.5rem;
+}
+
 .cartao__botao {
     display: flex;
     justify-content: center;
@@ -284,37 +299,13 @@ body {
     width: 100%;
     grid-column: span 2;
 }
+
 .cartao__botao--destaque::before {
     margin-right: 8px;
-    content: "\e90b";
-}
-
-.cartao__botao--destaque-comprar {
-    width: 140px;
-    height: 40px;
-    font-size: 0.9rem;
-}
-.cartao__botao--destaque-comprar::before {
-    margin-right: 8px;
-    content: "\e901";
-    font-size: 1.2rem;
 }
 
 .cartao--recentes {
     display: none;
-}
-
-.cartao__info--money {
-    font-size: 1rem;
-}
-.cartao__info--money::before {
-    margin-right: 8px;
-    content: "\e905";
-}
-
-.cartao__botao--comprar::before {
-    content: "\e901";
-    font-size: 1.5rem;
 }
 
 @media screen and (min-width: 1440px) {
@@ -325,8 +316,10 @@ body {
     .cartao__imagem--mobile {
         display: none;
     }
+
     .cartao__imagem--desktop {
         display: block;
+        height: 30rem;
     }
 
     .cartao__botao--destaque {
@@ -347,7 +340,6 @@ body {
 
     .cartao--recentes .cartao__titulo {
         grid-column: auto;
-        font-size: 1rem;
     }
 
     .cartao__link {
@@ -418,5 +410,46 @@ body {
     
     .secao-produtos {
         grid-area: secao-produtos;
+    }
+}
+
+/* Picos */
+
+@media screen and (min-width: 1440px) {
+    .principal--picos {
+        grid-template-areas: 
+        "titulo-pagina titulo-pagina titulo-pagina"
+        "picos-mapa picos-mapa picos-favoritos"
+        "secao-picos-mais-visitados secao-picos-mais-visitados secao-picos-mais-visitados"
+        ;
+    }
+}
+
+.picos-mapa {
+    width: 100%;
+    height: 468px;
+    background-image: url(../img/mapa-picos.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.cartao__botao--pico::before {
+    content: "\e908";
+    font-size: 24px;
+}
+
+@media screen and (min-width: 1440px) {
+    .picos-mapa {
+        grid-area: picos-mapa;
+    }
+
+    .picos-favoritos {
+        grid-area: picos-favoritos;
+    }
+
+    .secao-picos-mais-visitados {
+        grid-area: secao-picos-mais-visitados;
     }
 }
