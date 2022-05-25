@@ -460,6 +460,8 @@ body {
         width: 85vw;
         height: 100vh;
         gap: 1rem 3rem;
+
+        
     }
 
 
@@ -514,10 +516,12 @@ body {
     .espacopicotexto {
         
         width: 100%;
-        min-height: 108rem;
+        min-height: 240rem;
         grid-area: espacopicotexto;
         grid-column: span 3;
         grid-row: 2 / span 4;
+        
+        
     }
 
     .titulo__secao {
@@ -533,7 +537,7 @@ body {
         font-size: 2rem;
         font-weight: 400;
         line-height: 4rem;
-    }
+    margin-bottom: 2rem;}
 
     .picos__mapa2 {
         width: 100%;
@@ -544,5 +548,33 @@ body {
         background-position: bottom;
         border-radius: 15px;
         margin: 1rem 0 1rem 0;
+    }
+
+    .imagensartigo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 80rem;
+        height: 31rem;
+        gap: 1rem 4rem;
+    }
+
+    .imgartigo {
+        background-image: url(../img/artigo_3.png);
+        width: 55rem;
+        height: 30rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 15px;
+    }
+    .imgartigo__2 {
+        background-image: url(../img/artigo_4.png);
+        width: 40rem;
+        height: 31rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 15px;
     }
 }
