@@ -97,6 +97,57 @@ body {
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .cabecalho {
+        background-color: #1D232A;
+        display: grid;
+        column-gap: 32px;
+        grid-template-columns: 1fr auto;
+        padding: 16px 16px;
+        height: 80px;
+        box-sizing: border-box;
+        grid-column: 2;
+
+        width: 96%;
+    }
+
+    .cabecalho__menu {
+        display: none;
+    }
+
+    .cabecalho__logo {
+        display: none;
+    }
+
+    .cabecalho__perfil {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 8px;
+        align-items: center;
+        justify-self: flex-end;
+        color: #95999C;
+        padding: 8px 32px;
+        border-right: 1px solid #95999C;
+    }
+
+    .cabecalho__perfil::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/profile_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .cabecalho__perfil::after {
+        content: "\e90d";
+        color: #FFFFFF;
+        font-size: 1.5rem;
+    }
+}
+
 .menu-lateral {
     display: flex;
     flex-direction: column;
@@ -206,6 +257,16 @@ body {
         /* column-gap: 32px; */
         padding: 16px 60px;
         /* grid-column: 2; */
+    }
+
+    .titulo-secao {
+        grid-column: span 4;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .principal {
+        padding: 16px 50px;
     }
 
     .titulo-secao {
@@ -453,7 +514,7 @@ body {
     font-size: 24px;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 1440px) {
     .principal--picos {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -461,10 +522,7 @@ body {
         width: 88vw;
         height: 100vh;
         gap: 1rem 3rem;
-
-        
     }
-
 
     .picos-mapa {
         grid-area: picos-mapa;
@@ -504,8 +562,6 @@ body {
         display: none;
     }
 
-
-
     .secao {
         display: grid;
         grid-column: span 2;
@@ -521,15 +577,10 @@ body {
         grid-area: espacopicotexto;
         grid-column: span 3;
         grid-row: 2 / span 4;
-        
-        
     }
 
     .titulo__secao {
-    
         grid-area: titulo__secao;
-        ;
-        
         font-size: 4rem;
         font-weight: 600;
         margin-bottom: 2rem;
@@ -538,7 +589,7 @@ body {
         font-size: 2rem;
         font-weight: 400;
         line-height: 4rem;
-    margin-bottom: 2rem;}
+        margin-bottom: 2rem;}
 
     .picos__mapa2 {
         width: 100%;
@@ -573,6 +624,175 @@ body {
         background-image: url(../img/artigo_4.png);
         width: 40rem;
         height: 31rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .principal--picos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 80vw;
+        height: 100vh;
+        gap: 1rem 3rem;
+    }
+
+    .picos-mapa {
+        grid-area: picos-mapa;
+        display: block;
+        grid-column: span 2;
+        grid-template-columns: auto 1fr;
+        width: 100%;
+        height: 42rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .picos-favoritos {
+        grid-area: picos-favoritos;
+    }
+
+    .secao-picos-mais-visitados {
+        grid-area: secao-picos-mais-visitados;
+        width: 18rem;
+        min-height: 50px;
+        gap: 1rem;
+        grid-row: 1 / span 4;
+        grid-column: 4;
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .titulo-secao {
+        line-height: 3.5rem;
+    }
+    .cartao__conteudo {
+        height: 6rem;
+    }
+
+    .titulo-pagina {
+        display: none;
+    }
+
+    .secao {
+        display: grid;
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+        grid-area: secao;
+    }
+
+    .espacopicotexto {
+        
+        width: 100%;
+        min-height: 240rem;
+        grid-area: espacopicotexto;
+        grid-column: span 3;
+        grid-row: 2 / span 4;
+    }
+
+    .titulo__secao {
+        grid-area: titulo__secao;
+        font-size: 4rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    .texto__pico {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 4rem;
+        margin-bottom: 2rem;}
+
+    .picos__mapa2 {
+        width: 100%;
+        height: 768px;
+        background-image: url(../img/artigo_2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 15px;
+        margin: 1rem 0 1rem 0;
+    }
+
+    .imagensartigo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 56rem;
+        height: 19rem;
+        gap: 1rem 1rem;
+    }
+
+    .imgartigo {
+        background-image: url(../img/artigo_3.png);
+        width: 26rem;
+        height: 17rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 15px;
+    }
+    .imgartigo__2 {
+        background-image: url(../img/artigo_4.png);
+        width: 21rem;
+        height: 17rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .principal--picos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 100vw;
+        height: 100vh;
+        gap: 1rem 3rem;
+    }
+
+    .cabecalho {
+        background-color: #1D232A;
+        display: grid;
+        column-gap: 32px;
+        grid-template-columns: 1fr auto;
+        padding: 16px 16px;
+        height: 80px;
+        box-sizing: border-box;
+        grid-column: 2;
+
+        width: 96%;
+    }
+
+    .imagensartigo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 120rem;
+        height: 37rem;
+        gap: 1rem 4rem;
+    }
+
+    .imgartigo {
+        background-image: url(../img/artigo_3.png);
+        width: 64rem;
+        height: 35rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 15px;
+    }
+    .imgartigo__2 {
+        background-image: url(../img/artigo_4.png);
+        width: 45rem;
+        height: 35rem;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
