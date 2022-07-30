@@ -1,6 +1,6 @@
-@import url("picos/cabecalho.css");
-@import url("picos/menulateral.css");
-@import url("picos/cartao.css");
+@import url("videoss/cabecalho.css");
+@import url("videoss/menulateral.css");
+@import url("videoss/cartao.css");
 
 @font-face {
     font-family: 'icones';
@@ -80,6 +80,8 @@ body {
     font-size: 24px;
 }
 
+
+
 @media screen and (min-width: 0px) {
     .principal {
         display: grid;
@@ -104,6 +106,14 @@ body {
         display: none;
     }
 
+    .espacopicotexto {
+        width: 100%;
+    }
+
+    .video-externo {
+        width: 100%;
+    }
+
     .picos-mapa {
         background-image: url(../img/Rectangle5.png);
         background-position: center;
@@ -115,7 +125,7 @@ body {
     }
 
     .picos__mapa2 {
-        background-image: url(../img/artigo_2.png);
+        background-image: url(../img/aritgovideo1.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -142,7 +152,7 @@ body {
     }
 
     .imgartigo {
-        background-image: url(../img/artigo_3.png);
+        background-image: url(../img/aritgovideo1.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
@@ -152,7 +162,7 @@ body {
     }
 
     .imgartigo__2 {
-        background-image: url(../img/artigo_4.png);
+        background-image: url(../img/artigovideo2.png);
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -169,17 +179,17 @@ body {
 
     .imagensartigo {
         display: flex;
-        height: 16rem;
+        height: 15rem;
         width: 100%;
     }
 
     .imgartigo {
-        height: 16rem;
-        width: 23rem;
+        height: 15rem;
+        width: 22rem;
     }
 
     .imgartigo__2 {
-        height: 16rem;
+        height: 15rem;
         width: 21rem;
     }
 }
@@ -295,17 +305,6 @@ body {
         margin-bottom: 2rem;
     }
 
-    .picos__mapa2 {
-        background-image: url(../img/artigo_2.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        border-radius: 15px;
-        height: 30rem;
-        margin: 1rem 0 1rem 0;
-        width: 100%;
-    }
-
     .imagensartigo {
         display: grid;
         gap: 1rem 1rem;
@@ -316,7 +315,7 @@ body {
     }
 
     .imgartigo {
-        background-image: url(../img/artigo_3.png);
+        background-image: url(../img/aritgovideo1.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
@@ -326,7 +325,7 @@ body {
     }
 
     .imgartigo__2 {
-        background-image: url(../img/artigo_4.png);
+        background-image: url(../img/artigovideo2.png);
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -358,6 +357,42 @@ body {
         height: 25rem;
         margin-bottom: 1.5rem;
         width: 100%;
+    }
+
+    .video-externo {
+        display: block;
+        grid-area: picos-mapa;
+        grid-column: span 2;
+        grid-template-columns: auto 1fr;
+        height: 25rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .cartao__info-perfil {
+        align-items: center;
+        color: #95999C;
+        display: flex;
+    }
+/*
+    .cartao__info-perfil::before {
+        content: url(../img/profile_3.png);
+        height: 3rem;
+        width: 3rem;
+    }
+*/
+    .imagem-perfil {
+        display: flex;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .imagem-perfil::before {
+        content: attr(cartao__info-perfil);
     }
 
     .picos-favoritos {
@@ -411,7 +446,7 @@ body {
         grid-area: espacopicotexto;
         grid-column: span 3;
         grid-row: 2 / span 4;
-        min-height: 185rem;
+        min-height: 140rem;
         width: 100%;
     }
 
@@ -429,17 +464,6 @@ body {
         margin-bottom: 2rem;
     }
 
-    .picos__mapa2 {
-        background-image: url(../img/artigo_2.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        border-radius: 15px;
-        height: 30rem;
-        margin: 1rem 0 1rem 0;
-        width: 100%;
-    }
-
     .imagensartigo {
         display: grid;
         gap: 1rem 1rem;
@@ -450,23 +474,23 @@ body {
     }
 
     .imgartigo {
-        background-image: url(../img/artigo_3.png);
+        background-image: url(../img/aritgovideo1.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
         border-radius: 15px;
-        height: 14rem;
-        width: 24rem;
+        height: 15rem;
+        width: 25rem;
     }
 
     .imgartigo__2 {
-        background-image: url(../img/artigo_4.png);
+        background-image: url(../img/artigovideo2.png);
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 15px;
-        height: 14rem;
-        width: 21rem;
+        height: 15rem;
+        width: 22rem;
     }
 }
 
@@ -545,7 +569,7 @@ body {
         grid-area: espacopicotexto;
         grid-column: span 3;
         grid-row: 2 / span 4;
-        min-height: 165rem;
+        min-height: 120rem;
         width: 100%;
     }
 
@@ -563,28 +587,17 @@ body {
         margin-bottom: 2rem;
     }
 
-    .picos__mapa2 {
-        background-image: url(../img/artigo_2.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        border-radius: 15px;
-        height: 30rem;
-        margin: 1rem 0 1rem 0;
-        width: 100%;
-    }
-
     .imagensartigo {
         display: grid;
         gap: 1rem 1rem;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        height: 25rem;
+        height: 24rem;
         width: 70rem;
     }
 
     .imgartigo {
-        background-image: url(../img/artigo_3.png);
+        background-image: url(../img/aritgovideo1.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
@@ -594,7 +607,7 @@ body {
     }
 
     .imgartigo__2 {
-        background-image: url(../img/artigo_4.png);
+        background-image: url(../img/artigovideo2.png);
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
